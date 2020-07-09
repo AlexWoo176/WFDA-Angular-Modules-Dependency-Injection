@@ -13,10 +13,10 @@ const forceSSL = function () {
     next();
   }
 };
-app.use(express.static('./dist/{{wfda-angular-modules-dependency-injection}}'));
+app.use(express.static('./dist/{{angular-modules-dependency-injection}}'));
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname,'/dist/{{wfda-angular-modules-dependency-injection}}/index.html'));
+  res.sendFile(path.join(__dirname,'/dist/{{angular-modules-dependency-injection}}/index.html'));
 });
 
 app.use(forceSSL());
